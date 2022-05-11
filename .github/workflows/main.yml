@@ -36,5 +36,7 @@ jobs:
           file_name: .okta.env
       - name: Build and test
         run: |
+          cat .okta.env
+          cat /github/workspace/.okta.env
           source .okta.env
           mvn -B -ntp verify
