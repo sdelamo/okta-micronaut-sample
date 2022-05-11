@@ -32,6 +32,4 @@ jobs:
           echo "CLIENT_ID=${{ secrets.CLIENT_ID }}" >> $GITHUB_ENV
           echo "CLIENT_SECRET=${{ secrets.CLIENT_SECRET }}" >> $GITHUB_ENV
       - name: Build and test
-        run: |
-          echo "${{ env.ISSUER }}"
-          mvn -B -ntp verify
+        run: mvn -B -ntp verify
