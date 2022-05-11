@@ -26,17 +26,12 @@ jobs:
           distribution: 'temurin'
           java-version: ${{ matrix.java }}
           java-package: jdk
-      - name: Create .env file
-        uses: DamianReeves/write-file-action@v1.0
-        with:
-          path: ${{ env.GITHUB_WORKSPACE }}/.okta.env
-          contents: |
-            echo "export ISSUER=${{ secrets.ISSUER }}"
-            echo "export CLIENT_ID=${{ secrets.CLIENT_ID }}"
-            echo "export CLIENT_SECRET=${{ secrets.CLIENT_SECRET }}"
-          write-mode: overwrite
+      - name: Set environment variables
+        run: |
+          echo "ISSUER=${{ secrets.ISSUER }}" >> $GITHUB_ENV
+          echo "CLIENT_ID=${{ secrets.CLIENT_ID }}" >> $GITHUB_ENV
+          echo "CLIENT_SECRET=${{ secrets.CLIENT_SECRET }}" >> $GITHUB_ENV
       - name: Build and test
         run: |
-          cat .okta.env
-          source .okta.env
+          echo "${{ env.ISSUER }}"
           mvn -B -ntp verify
