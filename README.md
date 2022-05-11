@@ -27,6 +27,7 @@ okta start
 ## Run the Example
 
 ```bash
+source .okta.env
 ./mvnw mn:run
 ```
 
