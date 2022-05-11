@@ -1,6 +1,8 @@
 oauthClient:
   redirectUris:
-    - http://localhost:8080/callback
+    - http://localhost:8080/oauth/callback/okta
+  postLogoutRedirectUris:
+    - http://localhost:8080/logout
   applicationType: web
 
 directions: |+2
