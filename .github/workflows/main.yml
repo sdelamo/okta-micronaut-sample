@@ -27,7 +27,7 @@ jobs:
           java-version: ${{ matrix.java }}
           java-package: jdk
       - name: Create .env file
-        uses: DamianReeves/write-file-action@1
+        uses: DamianReeves/write-file-action@v1.0
         with:
           path: ${{ env.GITHUB_WORKSPACE }}/.okta.env
           contents: |
