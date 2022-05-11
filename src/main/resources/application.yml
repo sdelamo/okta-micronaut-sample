@@ -3,15 +3,26 @@ micronaut:
     name: app
   security:
     enabled: true
+    authentication: idtoken
+    oauth2:
+      clients:
+        okta:
+          client-id: ${CLIENT_ID}
+          client-secret: ${CLIENT_SECRET}
+          openid:
+            issuer: ${ISSUER}
+    endpoints:
+      logout:
+        get-allowed: true
     token:
       jwt:
         enabled: true
         claims-validators:
-          issuer: ${CLI_OKTA_ISSUER}
+          issuer: ${ISSUER}
         signatures:
           jwks:
             okta:
-              url: ${CLI_OKTA_ISSUER}/v1/keys
+              url: ${ISSUER}/v1/keys
 netty:
   default:
     allocator:

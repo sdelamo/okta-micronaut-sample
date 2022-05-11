@@ -4,8 +4,11 @@ oauthClient:
   applicationType: web
 
 directions: |+2
-  Okta configuration written to src/main/resources/application.yml.
+  Okta configuration written to .okta.env.
 
+  Add this file to .gitignore!
+  
   Run this application with:
 
+      source .okta.env
       mvn mn:run
