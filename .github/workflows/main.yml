@@ -32,6 +32,7 @@ jobs:
           envkey_ISSUER: ${{ secrets.ISSUER }}
           envkey_CLIENT_ID: ${{ secrets.CLIENT_ID }}
           envkey_CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+          directory: ${{ env.GITHUB_WORKSPACE }}
           file_name: .okta.env
       - name: Build and test
         run: |
