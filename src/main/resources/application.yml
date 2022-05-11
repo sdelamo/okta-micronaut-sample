@@ -1,0 +1,18 @@
+micronaut:
+  application:
+    name: app
+  security:
+    enabled: true
+    token:
+      jwt:
+        enabled: true
+        claims-validators:
+          issuer: ${CLI_OKTA_ISSUER}
+        signatures:
+          jwks:
+            okta:
+              url: ${CLI_OKTA_ISSUER}/v1/keys
+netty:
+  default:
+    allocator:
+      max-order: 3

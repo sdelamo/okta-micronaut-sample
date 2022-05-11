@@ -1,0 +1,11 @@
+oauthClient:
+  redirectUris:
+    - http://localhost:8080/callback
+  applicationType: web
+
+directions: |+2
+  Okta configuration written to src/main/resources/application.yml.
+
+  Run this application with:
+
+      mvn mn:run
