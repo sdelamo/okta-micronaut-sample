@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<h2 th:if="${security}">Hello: <span th:text="${security.attributes.get('name')}"></span></h2>
+<h2 th:if="${security}">Hello: <span th:text="${security.attributes['name']}"></span></h2>
 <h2 th:unless="${security}">Hello: Anonymous</h2>
 
 <nav>
