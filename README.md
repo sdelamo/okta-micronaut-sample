@@ -31,6 +31,8 @@ source .okta.env
 ./mvnw mn:run
 ```
 
+The application uses [Micronaut Ahead-of-time optimizations (AOT) optimizations via the Micronaut Maven Plugin](https://micronaut-projects.github.io/micronaut-maven-plugin/latest/examples/aot.html). You can enable [Micronaut Security AOT optimizations](https://micronaut-projects.github.io/micronaut-security/latest/guide/#aot) in `aot-jar.properties`. 
+
 Log in at `http://localhost:8080`.
 
 ## API Access with OAuth 2.0
