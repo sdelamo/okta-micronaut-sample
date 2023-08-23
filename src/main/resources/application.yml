@@ -15,7 +15,6 @@ micronaut:
         get-allowed: true
     token:
       jwt:
-        enabled: true
         claims-validators:
           issuer: ${ISSUER}
         signatures:
