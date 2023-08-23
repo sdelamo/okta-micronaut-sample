@@ -1,6 +1,6 @@
 # Okta Micronaut Sample
 
-This example shows you how to use the [Micronaut's OAuth 2.0 support](https://micronaut-projects.github.io/micronaut-security/latest/guide/#oauth) to login a user. The login is achieved through the [Authorization Code Flow](https://micronaut-projects.github.io/micronaut-security/latest/guide/#authorization-code) where the user is redirected to the Okta-Hosted login page. After the user authenticates, they are redirected back to the application and a local cookie session is created.
+This example shows you how to use the [Micronaut's OAuth 2.0 support](https://micronaut-projects.github.io/micronaut-security/latest/guide/#oauth) to login a user. The login is achieved through the [Authorization Code Flow](https://developer.okta.com/docs/guides/implement-grant-type/authcode/main/) where the user is redirected to the Okta-Hosted login page. After the user authenticates, they are redirected back to the application and a local cookie session is created.
 
 It also shows how to return the user's information from an API using an OAuth 2.0 access token.
 
@@ -84,6 +84,4 @@ First, you'll need to generate an access token.
 
 For more details on how to build an application with Okta and Micronaut you can read [Build Native Java Apps with Micronaut, Quarkus, and Spring Boot](https://developer.okta.com/blog/2021/06/18/native-java-framework-comparison).
 
-[Micronaut's OAuth 2.0 support]: https://guides.micronaut.io/latest/micronaut-oauth2-okta-maven-java.html
 [OIDC Web Application Setup Instructions]: https://developer.okta.com/docs/guides/implement-grant-type/authcode/main/#set-up-your-app
-[Authorization Code Flow]: https://developer.okta.com/docs/guides/implement-grant-type/authcode/main/
