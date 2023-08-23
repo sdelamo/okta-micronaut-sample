@@ -137,6 +137,17 @@
               <artifactId>micronaut-security-annotations</artifactId>
               <version>${micronaut.security.version}</version>
             </path>
+            <path>
+              <groupId>io.micronaut.validation</groupId>
+              <artifactId>micronaut-validation-processor</artifactId>
+              <version>${micronaut.validation.version}</version>
+              <exclusions>
+                <exclusion>
+                  <groupId>io.micronaut</groupId>
+                  <artifactId>micronaut-inject</artifactId>
+                </exclusion>
+              </exclusions>
+            </path>
           </annotationProcessorPaths>
           <compilerArgs>
             <arg>-Amicronaut.processing.group=com.example</arg>
