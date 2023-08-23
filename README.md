@@ -55,31 +55,6 @@ or run an optimized JAR with Gradle
 
 Log in at `http://localhost:8080`.
 
-## API Access with OAuth 2.0
-
-You can also retrieve user information from the `/hello` endpoint with an OAuth 2.0 access token.
-
-First, you'll need to generate an access token.
-
-1. Run `okta apps create spa`. Set `oidcdebugger` as an app name and press **Enter**.
-
-2. Use `https://oidcdebugger.com/debug` for the Redirect URI and set the Logout Redirect URI to `https://oidcdebugger.com`.
-
-3. Navigate to the [OpenID Connect Debugger website](https://oidcdebugger.com/).
-
-    1. Fill in your client ID
-    2. Use `https://{yourOktaDomain}/oauth2/default/v1/authorize` for the Authorize URI
-    3. Select **code** for the response type and **Use PKCE**
-    4. Click **Send Request** to continue
-
-4. Set the access token as a `TOKEN` environment variable in a terminal window.
-
-       TOKEN=eyJraWQiOiJYa2pXdjMzTDRBYU1ZSzNGM...
-
-5. Test the API with [HTTPie](https://httpie.io/cli) and an access token.
-
-       http :8080/hello Authorization:"Bearer $TOKEN"
-
 ## Learn More
 
 For more details on how to build an application with Okta and Micronaut you can read [Build Native Java Apps with Micronaut, Quarkus, and Spring Boot](https://developer.okta.com/blog/2021/06/18/native-java-framework-comparison).
