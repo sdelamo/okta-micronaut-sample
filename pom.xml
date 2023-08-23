@@ -118,7 +118,10 @@
             <configFile>aot-${packaging}.properties</configFile>
           </configuration>
       </plugin>
-
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
