@@ -28,10 +28,30 @@ okta start
 
 ```bash
 source .okta.env
+```
+
+### Maven
+
+Run the application with Maven
+```
 ./mvnw mn:run
 ```
 
-The application uses [Micronaut Ahead-of-time optimizations (AOT) optimizations via the Micronaut Maven Plugin](https://micronaut-projects.github.io/micronaut-maven-plugin/latest/examples/aot.html). You can enable [Micronaut Security AOT optimizations](https://micronaut-projects.github.io/micronaut-security/latest/guide/#aot) in `aot-jar.properties`. 
+The application uses [Micronaut Ahead-of-time optimizations (AOT) optimizations via the Micronaut Maven Plugin](https://micronaut-projects.github.io/micronaut-maven-plugin/latest/examples/aot.html). You can enable [Micronaut Security AOT optimizations](https://micronaut-projects.github.io/micronaut-security/latest/guide/#aot) in `aot-jar.properties`.
+
+### Gradle
+
+Run the application via the [Micronaut Application Gradle Plugin](https://micronaut-projects.github.io/micronaut-gradle-plugin/latest/).  
+
+```
+./gradlew run
+```
+
+or run an optimized JAR with Gradle
+
+```
+./gradle optimizedRun
+```
 
 Log in at `http://localhost:8080`.
 
