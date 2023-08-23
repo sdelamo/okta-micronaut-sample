@@ -115,6 +115,13 @@
         <groupId>io.micronaut.maven</groupId>
         <artifactId>micronaut-maven-plugin</artifactId>
           <configuration>
+            <aotDependencies>
+              <dependency>
+                <groupId>io.micronaut.security</groupId>
+                <artifactId>micronaut-security-aot</artifactId>
+                <version>4.0.4</version>
+              </dependency>
+            </aotDependencies>
             <configFile>aot-${packaging}.properties</configFile>
           </configuration>
       </plugin>
