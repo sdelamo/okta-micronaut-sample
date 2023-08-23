@@ -21,7 +21,3 @@ micronaut:
           jwks:
             okta:
               url: ${ISSUER}/v1/keys
-netty:
-  default:
-    allocator:
-      max-order: 3
