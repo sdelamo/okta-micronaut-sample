@@ -28,7 +28,8 @@ dependencies {
     runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("org.yaml:snakeyaml")
     testImplementation("io.micronaut:micronaut-http-client")
-    aotPlugins("io.micronaut.security:micronaut-security-aot:4.0.1")
+    aotPlugins(platform("io.micronaut.platform:micronaut-parent:$micronautVersion"))
+    aotPlugins("io.micronaut.security:micronaut-security-aot")
 }
 
 
