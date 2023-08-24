@@ -58,8 +58,8 @@ micronaut {
         optimizeClassLoading = true
         deduceEnvironment = true
         optimizeNetty = true
-        configurationProperties.put("micronaut.security.jwks.enabled","false")
-        configurationProperties.put("micronaut.security.openid-configuration.enabled","false")
+        configurationProperties.put("micronaut.security.jwks.enabled","true")
+        configurationProperties.put("micronaut.security.openid-configuration.enabled","true")
     }
 }
 
