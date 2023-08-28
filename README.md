@@ -47,7 +47,7 @@ Run the application via the [Micronaut Application Gradle Plugin](https://micron
 ./gradlew run
 ```
 
-or run an optimized JAR with Gradle
+Or, run an optimized JAR with Gradle:
 
 ```
 ./gradle optimizedRun
